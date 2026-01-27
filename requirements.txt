@@ -1,0 +1,6 @@
+python-telegram-bot==20.3
+sqlalchemy==2.0.25
+aiogram==2.25.1  # Стабильная версия
+aiohttp==3.8.4
+pandas==1.5.3
+python-telegram-bot[job-queue]>=20.0

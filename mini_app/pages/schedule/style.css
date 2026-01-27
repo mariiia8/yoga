@@ -1,0 +1,294 @@
+.container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.classes-title {
+    font-size: 1.8rem;
+    color: #006699;
+    margin-bottom: 1.5rem;
+}
+
+.class-item {
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.class-header h3 {
+    margin: 0;
+    color: #0088cc;
+}
+
+.class-price {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.class-description {
+    color: #555;
+    margin: 10px 0;
+}
+
+.class-time {
+    color: #666;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.class-actions {
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.book-btn {
+    background: #0088cc;
+    color: white;
+}
+
+.book-btn:hover {
+    background: #006699;
+}
+
+.buy-subscription-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.buy-subscription-btn:hover {
+    background: #3d8b40;
+}
+
+.subscription-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.subscription-option {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.subscription-option h4 {
+    margin: 0 0 5px 0;
+    color: #0088cc;
+}
+
+.close-modal {
+    margin-top: 15px;
+    background: #f44336;
+    color: white;
+}
+
+.close-modal:hover {
+    background: #d32f2f;
+}
+
+.error-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.error-container button {
+    margin-top: 15px;
+    background: #0088cc;
+    color: white;
+}
+
+/* Добавить к существующим стилям */
+
+.schedule-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    color: #006699;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #006699; /* Добавляем обводку */
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background: #006699;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem; /* Уменьшаем с 1.5rem до 1rem */
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.class-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.class-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-color);
+}
+
+.class-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.class-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.class-description {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.class-actions {
+    margin-top: auto; /* Прижимаем кнопки к низу */
+    display: flex;
+    gap: 0.8rem;
+}
+
+.action-button {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    border: none;
+    font-size: 0.9rem;
+}
+
+
+.action-button:disabled {
+    background: #cccccc !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.book-button {
+    background: var(--primary-color);
+    color: #006699;
+    box-shadow: 0 2px 4px rgba(0, 136, 204, 0.3);
+}
+
+.book-button:hover {
+    background: #006699;
+    color: white;
+}
+
+/* Бейдж "Вы записаны" */
+.booking-badge {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    width: max-content;
+}
+
+.past-badge {
+    display: inline-block;
+    background-color: #f44336;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    width: max-content;
+}
+
+/* Кнопка "Отписаться" */
+.cancel-button {
+    background: #f44336 !important;
+    color: white !important;
+}
+
+.cancel-button:hover {
+    background: #d32f2f !important;
+}
+
+
+.subscribe-button {
+    background: #4CAF50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.subscribe-button:hover {
+    background: #3d8b40;
+}
+
+/* Модальное окно (оставить как было) */

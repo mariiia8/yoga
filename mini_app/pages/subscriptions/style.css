@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #0088cc;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+}
+
+.subscriptions-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    color: #006699;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #006699; /* Добавляем обводку */
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background: #006699;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.subscriptions-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.subscriptions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.subscription-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+.subscription-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.subscription-name {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.subscription-class {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.subscription-details {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.visits-remaining {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--success-color);
+    color: white;
+    border-radius: 12px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.no-subscriptions {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    color: #666;
+}
+
+.error-container {
+    padding: 2rem;
+    text-align: center;
+    color: #d32f2f;
+}
+
+.error-container button {
+    margin-top: 1rem;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: #006699;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .subscriptions-container {
+        padding: 1.5rem;
+    }
+    
+    .subscriptions-grid {
+        grid-template-columns: 1fr;
+    }
+}

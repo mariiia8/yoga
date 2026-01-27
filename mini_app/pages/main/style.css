@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #0088cc;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.welcome {
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.welcome h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.welcome p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.menu-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .menu {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .welcome h1 {
+        font-size: 1.6rem;
+    }
+    
+    .menu-item {
+        min-height: 80px;
+        padding: 0.8rem;
+    }
+    
+    .menu-item i {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+    }
+}
